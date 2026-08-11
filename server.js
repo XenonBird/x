@@ -1,12 +1,6 @@
-const dns = require("dns");
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
-
-if (process.env.USE_CUSTOM_DNS === "true") {
-  dns.setServers(["8.8.8.8", "8.8.4.4"]);
-  console.log("Custom DNS servers set to Google DNS.");
-}
 
 const app = express();
 const PORT = process.env.PORT || 3000;
